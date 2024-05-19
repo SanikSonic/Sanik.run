@@ -13,25 +13,42 @@
             margin: 0;
             padding: 0;
         }
+        .nav-bar {
+            background-color: #0d1b6c; /* Blu molto più scuro */
+            padding: 10px 0;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        .nav-bar a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+        .nav-bar a:hover {
+            background-color: #3949ab;
+        }
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+            width: 800px;
+            margin: 100px auto;
+            padding: 40px;
             background-color: #283593;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-            margin-top: 20px;
         }
         .title {
             font-size: 2.5em;
             color: #ffffff;
         }
-        .message {
+        .subtitle, .message, .contract-address {
             font-size: 1.5em;
             color: #ffffff;
-            margin-bottom: 20px;
         }
-        .swap-button {
+        .token-image {
+            margin-top: 20px;
+            width: 128px;
+            height: 128px;
+        }
+        .buy-button, .swap-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #3949ab;
@@ -40,24 +57,26 @@
             border-radius: 5px;
             font-size: 1.2em;
             margin-top: 20px;
-            margin-bottom: 20px;
         }
-        .swap-button:hover {
+        .buy-button:hover, .swap-button:hover {
             background-color: #303f9f;
         }
         .hedgehog-theme {
             background-image: url('https://example.com/hedgehog-background.jpg');
             background-size: cover;
             background-position: center;
-            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
 <body>
+    <div class="nav-bar">
+        <a href="index">Home</a>
+        <a href="migration">Migration Instructions</a>
+        <a href="nft">NFT</a>
+    </div>
     <div class="container hedgehog-theme">
-        <a href="index.html" class="swap-button">Go to Sanik Meme Token</a>
         <h1 class="title">Sanik Meme Token Migration</h1>
         <p class="message">Instructions for migration will come soon when Sonic and S will come</p>
     </div>
