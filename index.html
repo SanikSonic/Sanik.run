@@ -16,17 +16,17 @@
         .nav-bar {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             background-color: #0d1b6c; /* Blu molto più scuro */
             padding: 10px 0;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            flex-wrap: nowrap;
+            overflow: auto;
         }
         .nav-bar a {
             color: #ffffff;
             text-decoration: none;
             padding: 10px 20px;
-            display: inline-block;
-            margin: 5px;
+            flex-shrink: 0;
         }
         .nav-bar a:hover {
             background-color: #3949ab;
@@ -92,6 +92,13 @@
                 font-size: 1em;
                 padding: 8px 16px;
             }
+            .nav-bar {
+                padding: 10px 5px;
+            }
+            .nav-bar a {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
         }
     </style>
 </head>
@@ -111,5 +118,3 @@
     </div>
 </body>
 </html>
-
-
