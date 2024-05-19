@@ -28,7 +28,8 @@
             background-color: #3949ab;
         }
         .container {
-            width: 800px;
+            width: 90%;
+            max-width: 800px;
             margin: 100px auto;
             padding: 40px;
             background-color: #283593;
@@ -67,6 +68,18 @@
             background-position: center;
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+        }
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2em;
+            }
+            .subtitle, .message, .contract-address {
+                font-size: 1.2em;
+            }
+            .buy-button, .swap-button {
+                font-size: 1em;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
