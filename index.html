@@ -20,6 +20,7 @@
             background-color: #283593;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
         }
         .title {
             font-size: 2.5em;
@@ -52,6 +53,20 @@
             color: #ffffff;
             margin-top: 20px;
         }
+        .swap-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3949ab;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .swap-button:hover {
+            background-color: #303f9f;
+        }
         .hedgehog-theme {
             background-image: url('https://example.com/hedgehog-background.jpg');
             background-size: cover;
@@ -64,6 +79,7 @@
 </head>
 <body>
     <div class="container hedgehog-theme">
+        <a href="migration.html" class="swap-button">Go to Migration Instructions</a>
         <h1 class="title">Sanik Meme Token</h1>
         <p class="subtitle">Sanik is fantom's most <strong>FASTER</strong> and <strong>RETARDED</strong> meme token!</p>
         <img src="https://cdn.jsdelivr.net/gh/unified-defi/equalizer-tokens@latest/fantom/tokens/128x128/0x73e30eb2e469cc542d86397beca97ea6547e1ca7.png" alt="Sanik Token" class="token-image">
