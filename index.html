@@ -78,6 +78,21 @@
             border-radius: 15px;
             box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
         }
+        .buy-box {
+            background-color: #3949ab;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        .buy-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .buy-link:hover {
+            text-decoration: underline;
+        }
         @media (max-width: 600px) {
             .title {
                 font-size: 2em;
@@ -119,7 +134,11 @@
         <h1 class="title">Sanik Meme Token</h1>
         <p class="subtitle">The most FASTER and RETARDED meme token!</p>
         <img src="https://cdn.jsdelivr.net/gh/unified-defi/equalizer-tokens@latest/fantom/tokens/128x128/0x73e30eb2e469cc542d86397beca97ea6547e1ca7.png" alt="Sanik Meme Token" class="token-image">
-        <p class="message">Buy it on <a href="https://app.unidex.exchange/?chain=fantom&from=0x0000000000000000000000000000000000000000&to=0x73E30eb2e469cc542d86397bECA97Ea6547e1cA7">Unidex Aggregator</a></p>
+        <div class="buy-box">
+            <p class="message">Buy it on 
+                <a href="https://app.unidex.exchange/?chain=fantom&from=0x0000000000000000000000000000000000000000&to=0x73E30eb2e469cc542d86397bECA97Ea6547e1cA7" class="buy-link">Unidex Aggregator</a>
+            </p>
+        </div>
         <p class="contract-address">Contract Address: 0x73e30eb2e469cc542d86397beca97ea6547e1ca7</p>
         <!-- Aggiunta del pulsante Connect Wallet in alto a destra -->
         <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
@@ -142,3 +161,4 @@
     </script>
 </body>
 </html>
+
