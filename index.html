@@ -57,7 +57,7 @@
             width: 128px;
             height: 128px;
         }
-        .buy-button, .swap-button {
+        .buy-button, .swap-button, .wallet-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #3949ab;
@@ -67,7 +67,7 @@
             font-size: 1.2em;
             margin-top: 20px;
         }
-        .buy-button:hover, .swap-button:hover {
+        .buy-button:hover, .swap-button:hover, .wallet-button:hover {
             background-color: #303f9f;
         }
         .hedgehog-theme {
@@ -88,7 +88,7 @@
                 font-size: 1em;
                 word-wrap: break-word;
             }
-            .buy-button, .swap-button {
+            .buy-button, .swap-button, .wallet-button {
                 font-size: 1em;
                 padding: 8px 16px;
             }
@@ -115,6 +115,23 @@
         <br><br>
         <a href="https://app.unidex.exchange/?chain=fantom&from=0x0000000000000000000000000000000000000000&to=0x73E30eb2e469cc542d86397bECA97Ea6547e1cA7" class="buy-button">Buy it on Unidex Aggregator</a>
         <p class="contract-address">Contract Address: 0x73e30eb2e469cc542d86397beca97ea6547e1ca7</p>
+        <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
     </div>
+    <script>
+        document.getElementById('connectWalletButton').addEventListener('click', async () => {
+            if (typeof window.ethereum !== 'undefined') {
+                try {
+                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+                    console.log('Connected account:', accounts[0]);
+                    alert('Wallet connected: ' + accounts[0]);
+                } catch (error) {
+                    console.error('Error connecting to MetaMask:', error);
+                    alert('Failed to connect to MetaMask.');
+                }
+            } else {
+                alert('MetaMask is not installed. Please install MetaMask and try again.');
+            }
+        });
+    </script>
 </body>
 </html>
