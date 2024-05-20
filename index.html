@@ -114,6 +114,33 @@
         <a href="migration.html">Migration Instructions</a>
         <a href="nft.html">NFT</a>
     </div>
+       <div class="nav-bar">
+        <a href="index.html">Home</a>
+        <a href="migration.html">Migration Instructions</a>
+        <a href="nft.html">NFT</a>
+    </div>
+    <div class="container hedgehog-theme">
+        <h1 class="title">Sanik Meme Token NFT</h1>
+        <!-- Aggiunta del pulsante Connect Wallet in alto a destra -->
+        <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
+    </div>
+    <script>
+        document.getElementById('connectWalletButton').addEventListener('click', function() {
+            // Codice per connettersi al wallet
+            // Ad esempio, utilizzando Web3.js per connettersi a MetaMask
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                window.ethereum.enable().then(function(accounts) {
+                    console.log('Connected with address:', accounts[0]);
+                    // Puoi eseguire ulteriori azioni qui una volta connesso al wallet
+                }).catch(function(error) {
+                    console.error('Error connecting to wallet:', error);
+                });
+            } else {
+                console.error('Web3 not found. Make sure you have a wallet like MetaMask installed.');
+            }
+        });
+    </script>
     <div class="container hedgehog-theme">
         <h1 class="title">Sanik Meme Token</h1>
         <p class="subtitle">The most FASTER and RETARDED meme token!</p>
@@ -123,7 +150,7 @@
         <!-- Aggiunta del pulsante Connect Wallet in alto a destra -->
         <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
     </div>
-    <!-- Script JavaScript rimossa per brevità -->
+    
 </body>
 </html>
 
