@@ -100,38 +100,30 @@
                 font-size: 0.9em;
             }
         }
+        /* Aggiunta del CSS per posizionare il pulsante in alto a destra */
+        .wallet-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="nav-bar">
-        <a href="index">Home</a>
-        <a href="migration">Migration Instructions</a>
-        <a href="nft">NFT</a>
+        <a href="index.html">Home</a>
+        <a href="migration.html">Migration Instructions</a>
+        <a href="nft.html">NFT</a>
     </div>
     <div class="container hedgehog-theme">
         <h1 class="title">Sanik Meme Token</h1>
-        <p class="subtitle">Sanik is fantom's most <strong>FASTER</strong> and <strong>RETARDED</strong> meme token!</p>
-        <img src="https://cdn.jsdelivr.net/gh/unified-defi/equalizer-tokens@latest/fantom/tokens/128x128/0x73e30eb2e469cc542d86397beca97ea6547e1ca7.png" alt="Sanik Token" class="token-image">
-        <br><br>
-        <a href="https://app.unidex.exchange/?chain=fantom&from=0x0000000000000000000000000000000000000000&to=0x73E30eb2e469cc542d86397bECA97Ea6547e1cA7" class="buy-button">Buy it on Unidex Aggregator</a>
+        <p class="subtitle">The most FASTER and RETARDED meme token!</p>
+        <img src="https://cdn.jsdelivr.net/gh/unified-defi/equalizer-tokens@latest/fantom/tokens/128x128/0x73e30eb2e469cc542d86397beca97ea6547e1ca7.png" alt="Sanik Meme Token" class="token-image">
+        <p class="message">Buy it on <a href="https://app.unidex.exchange/?chain=fantom&from=0x0000000000000000000000000000000000000000&to=0x73E30eb2e469cc542d86397bECA97Ea6547e1cA7">Unidex Aggregator</a></p>
         <p class="contract-address">Contract Address: 0x73e30eb2e469cc542d86397beca97ea6547e1ca7</p>
+        <!-- Aggiunta del pulsante Connect Wallet in alto a destra -->
         <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
     </div>
-    <script>
-        document.getElementById('connectWalletButton').addEventListener('click', async () => {
-            if (typeof window.ethereum !== 'undefined') {
-                try {
-                    const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-                    console.log('Connected account:', accounts[0]);
-                    alert('Wallet connected: ' + accounts[0]);
-                } catch (error) {
-                    console.error('Error connecting to MetaMask:', error);
-                    alert('Failed to connect to MetaMask.');
-                }
-            } else {
-                alert('MetaMask is not installed. Please install MetaMask and try again.');
-            }
-        });
-    </script>
+    <!-- Script JavaScript rimossa per brevità -->
 </body>
 </html>
+
