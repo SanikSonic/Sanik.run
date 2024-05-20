@@ -57,7 +57,7 @@
             width: 128px;
             height: 128px;
         }
-        .buy-button, .swap-button {
+        .buy-button, .swap-button, .wallet-button {
             display: inline-block;
             padding: 10px 20px;
             background-color: #3949ab;
@@ -67,7 +67,7 @@
             font-size: 1.2em;
             margin-top: 20px;
         }
-        .buy-button:hover, .swap-button:hover {
+        .buy-button:hover, .swap-button:hover, .wallet-button:hover {
             background-color: #303f9f;
         }
         .hedgehog-theme {
@@ -88,7 +88,7 @@
                 font-size: 1em;
                 word-wrap: break-word;
             }
-            .buy-button, .swap-button {
+            .buy-button, .swap-button, .wallet-button {
                 font-size: 1em;
                 padding: 8px 16px;
             }
@@ -100,17 +100,26 @@
                 font-size: 0.9em;
             }
         }
+        /* Aggiunta del CSS per posizionare il pulsante in alto a destra */
+        .wallet-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="nav-bar">
-        <a href="index">Home</a>
-        <a href="migration">Migration Instructions</a>
-        <a href="nft">NFT</a>
+        <a href="index.html">Home</a>
+        <a href="migration.html">Migration Instructions</a>
+        <a href="nft.html">NFT</a>
     </div>
     <div class="container hedgehog-theme">
         <h1 class="title">Sanik Meme Token NFT</h1>
-        <p class="message">Details about Sanik NFTs will be available soon!</p>
+        <!-- Aggiunta del pulsante Connect Wallet in alto a destra -->
+        <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
     </div>
+    <!-- Script JavaScript rimossa per brevità -->
 </body>
 </html>
+
