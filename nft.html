@@ -39,6 +39,7 @@
             background-color: #283593;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+            position: relative; /* Per posizionare il pulsante in alto a destra */
         }
         .title {
             font-size: 2.5em;
@@ -119,7 +120,21 @@
         <!-- Aggiunta del pulsante Connect Wallet in alto a destra -->
         <button class="wallet-button" id="connectWalletButton">Connect Wallet</button>
     </div>
-    <!-- Script JavaScript rimossa per brevità -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+    <script>
+        document.getElementById('connectWalletButton').addEventListener('click', function() {
+            if (window.ethereum) {
+                window.web3 = new Web3(window.ethereum);
+                window.ethereum.enable().then(function(accounts) {
+                    console.log('Connected with address:', accounts[0]);
+                    // Puoi eseguire ulteriori azioni qui una volta connesso al wallet
+                }).catch(function(error) {
+                    console.error('Error connecting to wallet:', error);
+                });
+            } else {
+                console.error('Web3 not found. Make sure you have a wallet like MetaMask installed.');
+            }
+        });
+    </script>
 </body>
 </html>
-
