@@ -146,7 +146,8 @@
                 window.web3 = new Web3(window.ethereum);
                 window.ethereum.enable().then(function(accounts) {
                     console.log('Connected with address:', accounts[0]);
-                    document.getElementById('walletAddress').innerText = accounts[0];
+                    const shortAddress = accounts[0].slice(0, 6) + '...' + accounts[0].slice(-4);
+                    document.getElementById('walletAddress').innerText = shortAddress;
                     document.getElementById('connectWalletButton').style.display = 'none'; // Nasconde il pulsante dopo la connessione
                 }).catch(function(error) {
                     console.error('Error connecting to wallet:', error);
