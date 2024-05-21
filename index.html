@@ -108,10 +108,15 @@
                 margin-top: 10px;
             }
             .wallet-button {
-                top: 5px;
-                right: 5px;
+                top: auto;
+                right: auto;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: fixed;
                 font-size: 1em;
                 padding: 8px 16px;
+                z-index: 10;
             }
             .nav-bar a {
                 padding: 8px 10px;
@@ -148,9 +153,9 @@
         <a href="index">Home</a>
         <a href="migration">Migration Instructions</a>
         <a href="nft">NFT</a>
-        <a href="#" class="wallet-button" id="connectWalletButton">Connect Wallet</a>
     </div>
     <div class="wallet-address" id="walletAddress"></div>
+    <a href="#" class="wallet-button" id="connectWalletButton">Connect Wallet</a>
     <div class="container hedgehog-theme">
         <h1 class="title">Sanik Meme Token</h1>
         <p class="message">Sanik is fantom's most <strong>FASTER</strong> and <strong>RETARDED</strong> meme token!</p>
