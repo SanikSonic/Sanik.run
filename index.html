@@ -14,13 +14,12 @@
             padding: 0;
         }
         .nav-bar {
-            background-color: #0d1b6c; /* Blu molto più scuro */
+            background-color: #0d1b6c;
             padding: 10px 0;
             box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-wrap: nowrap;
             position: relative;
         }
         .nav-bar a {
@@ -99,6 +98,26 @@
             color: #ffffff;
             white-space: nowrap;
         }
+        @media (max-width: 768px) {
+            .wallet-address {
+                right: 10px;
+                top: 50px;
+                font-size: 1em;
+                position: static;
+                display: block;
+                margin-top: 10px;
+            }
+            .wallet-button {
+                top: 5px;
+                right: 5px;
+                font-size: 1em;
+                padding: 8px 16px;
+            }
+            .nav-bar a {
+                padding: 8px 10px;
+                font-size: 0.9em;
+            }
+        }
         @media (max-width: 600px) {
             .title {
                 font-size: 2em;
@@ -108,24 +127,18 @@
             }
             .buy-button, .wallet-button {
                 font-size: 1em;
-                padding: 8px 16px;
+                padding: 6px 12px;
             }
             .nav-bar {
                 padding: 10px 5px;
             }
             .nav-bar a {
-                padding: 8px 10px;
-                font-size: 0.9em;
-            }
-            .wallet-address {
-                right: 110px;
-                font-size: 1em;
+                padding: 5px 10px;
+                font-size: 0.8em;
             }
             .wallet-button {
-                top: 5px;
-                right: 5px;
-                font-size: 1em;
-                padding: 6px 12px;
+                font-size: 0.9em;
+                padding: 5px 10px;
             }
         }
     </style>
@@ -135,8 +148,8 @@
         <a href="index">Home</a>
         <a href="migration">Migration Instructions</a>
         <a href="nft">NFT</a>
+        <a href="#" class="wallet-button" id="connectWalletButton">Connect Wallet</a>
     </div>
-    <a href="#" class="wallet-button" id="connectWalletButton">Connect Wallet</a>
     <div class="wallet-address" id="walletAddress"></div>
     <div class="container hedgehog-theme">
         <h1 class="title">Sanik Meme Token</h1>
@@ -165,3 +178,4 @@
     </script>
 </body>
 </html>
+
