@@ -141,20 +141,25 @@
                 padding: 5px 10px;
                 font-size: 0.8em;
             }
-           @media (max-width: 768px) {
+        }
+            @media (max-width: 768px) {
         .wallet-button {
-            position: absolute;
-            top: calc(50% - 20px); /* Posiziona il pulsante nel mezzo verticale */
-            left: 50%; /* Posiziona il pulsante al centro orizzontale */
-            transform: translate(-50%, -50%); /* Corregge il posizionamento per centrare il pulsante */
-            padding: 10px 20px;
-            background-color: #ff0000; /* Colore rosso */
-            color: #ffffff;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2em;
-            z-index: 10;
+        position: absolute;
+        top: calc(50% - 30px); /* Posiziona il pulsante nel mezzo verticale */
+        left: 50%; /* Posiziona il pulsante al centro orizzontale */
+        transform: translate(-50%, -50%); /* Corregge il posizionamento per centrare il pulsante */
+        width: 200px; /* Specifica la larghezza del pulsante */
+        padding: 10px; /* Specifica il padding del pulsante */
+        background-color: #ff0000; /* Colore rosso */
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.2em;
+        text-align: center; /* Centra il testo all'interno del pulsante */
+        z-index: 10;
     }
+}
+
 }
 
             }
