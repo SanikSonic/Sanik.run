@@ -142,22 +142,33 @@
                 font-size: 0.8em;
             }
         }
-            @media (max-width: 768px) {
+        @media (max-width: 768px) {
+        .container {
+        width: 80%; /* Riduci la larghezza massima del contenitore */
+        max-width: 400px; /* Imposta una larghezza massima fissa per il contenitore */
+        margin: 100px auto; /* Centra il contenitore */
+        padding: 40px;
+        background-color: #283593;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        position: relative;
+    }
+
         .wallet-button {
         position: absolute;
-        top: calc(50% - 30px); /* Posiziona il pulsante nel mezzo verticale */
-        left: 50%; /* Posiziona il pulsante al centro orizzontale */
-        transform: translate(-50%, -50%); /* Corregge il posizionamento per centrare il pulsante */
-        width: auto; /* Imposta la larghezza automatica in base al contenuto */
-        padding: 10px 20px; /* Specifica il padding del pulsante */
-        background-color: #ff0000; /* Colore rosso */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 20px;
+        background-color: #ff0000;
         color: #ffffff;
         text-decoration: none;
         border-radius: 5px;
         font-size: 1.2em;
-        text-align: center; /* Centra il testo all'interno del pulsante */
         z-index: 10;
     }
+}
+
 }
 
     }
